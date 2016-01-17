@@ -1,0 +1,97 @@
+body {
+  max-width: 800px;
+  margin: 15px auto;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 0 0 15px;
+}
+
+form > div {
+  margin: 15px 0;
+}
+
+.languages {
+  background-color: #eee;
+  padding: 5px 10px;
+}
+.languages:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.languages > span {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.languages label {
+  display: block;
+}
+
+.dict {
+  display: none;
+}
+
+.words .word {
+  display: inline-block;
+  min-width: 100px;
+  border-bottom: 1px #eee solid;
+}
+
+.more {
+  background-color: transparent;
+  border: none;
+  color: #C00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.more:hover {
+  color: #F00;
+}
+.more:focus {
+  outline: none;
+}
+
+.context {
+  background-color: #FFFFEE;
+  border: 1px #DDCC88 solid;
+  font-family: Courier New, Courier, serif;
+  max-width: 440px;
+  padding: 10px 15px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.context > .next, .context > .prev {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0 3px 2px;
+  position: absolute;
+  top: 10px;
+}
+.context > .next:focus, .context > .prev:focus {
+  outline: none;
+}
+.context > .next {
+  right: -10px;
+}
+.context > .prev {
+  left: -10px;
+}
+
+.context > .position {
+  background-color: #eee;
+  border: 1px #888;
+  color: #555;
+  font-size: 16px;
+  padding: 0 4px;
+  position: absolute;
+  left: 50px;
+  top: -10px;
+}

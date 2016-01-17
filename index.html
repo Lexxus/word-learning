@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Vocab</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Words learning tool</h1>
+  <form id="form">
+    <div><input type="file" name="file"/></div>
+    <div class="languages">
+      <span>
+        <label>Source language:</label>
+        <select name="lang_src">
+          <option value="nld">Dutch</option>
+          <option value="eng" selected>English</option>
+          <option value="fra">French</option>
+          <option value="deu">German</option>
+          <option value="ell">Greek</option>
+          <option value="heb">Hebrew</option>
+          <option value="ita">Italian</option>
+          <option value="pol">Polish</option>
+          <option value="por">Portuguese</option>
+          <option value="rus">Russian</option>
+          <option value="spa">Spanish</option>
+          <option value="ukr">Ukrainian</option>
+        </select>
+      </span>
+      <span>
+        <label>translate to:</label>
+        <select name="lang_dest">
+          <option value="nld">Dutch</option>
+          <option value="eng">English</option>
+          <option value="fra">French</option>
+          <option value="deu">German</option>
+          <option value="ell">Greek</option>
+          <option value="heb">Hebrew</option>
+          <option value="ita">Italian</option>
+          <option value="pol">Polish</option>
+          <option value="por">Portuguese</option>
+          <option value="rus" selected>Russian</option>
+          <option value="spa">Spanish</option>
+          <option value="ukr">Ukrainian</option>
+        </select>
+      </span>
+    </div>
+    <div><button>Parse</button></div>
+  </form>
+
+  <div id="out"></div>
+  <div id="dict" class="dict">
+    <ol id="res" class="words"></ol>
+    <button id="more" type="button" class="more">more...</button>
+  </div>
+  <div id="contextWrapper" class="context">
+    <div id="context"></div>
+    <button id="btnPrev" class="prev" type="button">&laquo;</button>
+    <button id="btnNext" class="next" type="button">&raquo;</button>
+    <span id="position" class="position" title="Position in the text"></span>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
