@@ -19,7 +19,12 @@ function App() {
 
   function sort(obj) {
     return Object.keys(obj).sort(function(a, b) {
-      return obj[b] - obj[a];
+      var s = obj[b] - obj[a];
+
+      if(s === 0) {
+        s = a > b ? 1 : -1;
+      }
+      return s;
     });
   }
 
